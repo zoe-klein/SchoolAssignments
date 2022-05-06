@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.item-container {
+    display: flex;
+    justify-content: center;
+}
+
+.item-box {
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.button-container {
+    padding-right: 160px;
+    padding-left: 150px;
+}
+
+.hide {
+    display: none;
+}

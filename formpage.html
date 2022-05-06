@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="styles.css"> <!--css sheets for this page-->
+        <script src="jsform.js"></script> <!--javascript for this page-->
+    </head>
+
+    <title> JavaScript Form </title>
+    <h2 class="header"> Fill Out the Form Below :)</h2>
+
+    <form name="form" action="http://csit.selu.edu/cgi-bin/echo.cgi" method="post" onsubmit="return(checkForm())">
+        <!--before this form is submitted to the site under action: when submit is clicked, the form will
+        be checked to make sure all fields are not empty as well as validate the website and email inputs
+        are in the right format-->
+        <div>
+
+            <div class="header">
+                <label> Address: </label>
+                <input type="text" name="address">
+            </div> <!--address div-->
+
+        <div class="item-container">
+            <div class="item-box">
+                <label class=> This is a Business </label>
+            </div>
+
+            <div class="item-box">
+                <label> This is a Resident </label>
+            </div>
+        </div>
+
+            <div class="item-container">
+                <div class="button-container">
+                    <input type="radio" value="business" name="br" id="checkedBus" onclick="res();">
+                    <!--if this button is selected, the corresponding html code below
+                    (Resident code) will be unhidden on the screen for the user to
+                    fill out-->
+                </div>
+                <div class="button-container">
+                    <input type="radio" value="resident" name="br" id="checkedRes" onclick="bus();">
+                    <!--if this button is selected, the corresponding html code below
+                    (Business code) will be unhidden on the screen for the user to
+                    fill out-->
+                </div>
+            </div>
+
+        </div> <!--big div-->
+
+        <div id="Business" class="hide">
+            <!--if selected, user will fill out this code below-->
+            <div class="item-container">
+                <label> Business name: </label>
+                <input type="text" name="name">
+            </div>
+
+            <div class="item-container">
+                <label> Business Website URL: </label>
+                <input type="text" name="website">
+            </div>
+
+            <div class=item-container>
+                <label> Business Tax ID: </label>
+                <input type="text" name="taxId">
+            </div>
+
+            <div class="item-container">
+                <input class="submitbutton" type="submit" value="Submit">
+            </div>
+        </div>
+
+        <div id="Resident" class="hide">
+            <!--if selected, user will fill out this code below-->
+            <div class="item-container">
+                <label> Name: </label>
+                <input type="text" name="rname">
+            </div>
+
+            <div class="item-container">
+                <label> Email: </label>
+                <input type="text" name="email">
+            </div>
+
+            <div class="item-container">
+                <input class="submitbutton" type="submit" value="Submit">
+            </div>
+        </div>
+        
+    </form>
+</html>
