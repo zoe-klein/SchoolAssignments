@@ -1,0 +1,225 @@
+<!DOCTYPE html> 
+
+<html>
+    <!--Zoe Klein-->
+    <style>
+        .fullborder {
+            border-style: solid;
+            border-color: blue;
+            background-color: pink;
+            margin: auto;
+            width: 1200px;
+            height: 1800px;
+        }
+
+        .header {
+            display: flex;  
+            justify-content: center;
+        }
+
+        .parborder {
+            border-style: solid;
+            border-color: red;
+            background-color: plum;
+            margin: auto;
+            width: 900px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .itemborder {
+            border-style: solid;
+            margin: auto;
+            width: 850px;
+            height: 370px;
+        }
+
+        .itemalign {
+            float: right;
+            text-align: center;
+            padding-right: 100px;
+        }
+
+        .imgalign {
+            position: relative; top: 50px; left: 50px;
+        }
+
+        .sweetalign {
+            position: relative; top: 50px; left: 90px;
+        }
+
+        .additem {
+            position: relative; top: 50px; left: 100px;
+            padding: 5px;
+        }
+
+        .linebreak {
+            border-top: 1px solid;
+            margin-left: 350px;
+            margin-right: 350px;
+            color: black;
+        }
+        
+        .optionsalign {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .shippinginfo {
+            text-align: center;
+        }
+
+        .message {
+            position: relative; left: 20px;
+        }
+
+    </style>
+
+    <!--title-->
+    <title> Desserts </title>
+
+    <input type="hidden" id="name" name="Zoe" lastname="Klein">
+
+    <div class="fullborder">
+    <body>
+        <h1 class="header"> Desserts </h1>
+
+        <div class="parborder">
+            Welcome!
+            We offer the best desserts there are!
+            Come and shop with us
+        </div>
+
+        <br>
+
+        <!--chocolate item-->
+        <div class="itemborder">
+            <img class="imgalign" src="Chocolate.jpg" style="width: 350px; height: 250px;">
+            <div class="itemalign">
+                <h4 style="color: blue;">Chocolate</h4>
+                <p> Delicious chocolate in many flavors</p>
+                <p> $10 </p>
+
+            <form action="http://ck.csit.selu.edu/~ck/cgi-bin/formhandler.pl">
+                <input type="radio" name="size" value="Small">
+                <label for="Small"> Chocolate </label>
+                <br>
+                <input type="radio" name="size" value="Medium">
+                <label for="Medium"> Dark Chocolate </label>
+                <br>
+                <input type="radio" name="size" value="Large">
+                <label for="Large"> White Chocolate </label>
+            </form>
+
+            </div>
+            <div class="additem">
+            <input type="checkbox" name="Add To Cart"> 
+                Add this item to cart
+            </div>
+        </div>
+
+        <br>
+        <hr class="linebreak">
+        <br>
+
+        <!--icecream item-->
+        <div class="itemborder">
+            <img class="sweetalign" src="sweet.jpg" style="width: 250px; height: 250px;">
+            <div class="itemalign">
+                <h4 style="color: blue">Ice Cream</h4>
+                <p> Sweet and tasty icecream you'll love</p>
+                <p> $15 </p>
+
+                <form action="http://ck.csit.selu.edu/~ck/cgi-bin/formhandler.pl">
+                    <label for="icecream-flavor">Select a flavor:</label>
+                    <br>
+                    <select name="vanilla" id="flavor">
+                        <option value="choose"> Select Flavor </option>
+                        <option value="vanilla"> Vanilla </option>
+                        <option value="chocolate"> Chocolate </option>
+                        <option value="strawberry"> Strawberry </option>
+                        <option value="mint-chocolate-chip"> Mint Chocolate Chip </option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="additem">
+            <input type="checkbox" name="Add To Cart"> 
+                Add this item to cart
+            </div>
+
+        </div>
+
+        <br>
+        <hr class="linebreak">
+        <br>
+
+        <div class="itemborder">
+            <img class="imgalign" src="icecream.jpg" style="width: 350px; height: 250px;">
+            <div class="itemalign">
+                <h4 style="color: blue;">Apple Pie</h4>
+                <p> Warm Caramel Apple Pie </p>
+                <p> $15 - slice, $30 - whole pie </p>
+
+            <form action="http://ck.csit.selu.edu/~ck/cgi-bin/formhandler.pl">
+            <div class="optionsalign">
+                <input type="checkbox" name="quantity" value="slice">
+                <label for="Small"> Once Slice </label>
+                <br>
+                <input type="checkbox" name="quantity" value="whole">
+                <label for="Medium"> Whole Pie </label>
+            </div>
+            </form>
+
+            </div>
+            <div class="additem">
+            <input type="checkbox" name="Add To Cart"> 
+                Add this item to cart
+            </div>
+        </div>
+
+        <!--shipping info-->
+        <div class="shippinginfo">
+        <form action="http://ck.csit.selu.edu/~ck/cgi-bin/formhandler.pl">
+            <h5 style="color: red;"> Shipping Information: </h5>
+
+            <div style="position: relative; left: 28px; font-family: 'Times New Roman', Times, serif; padding-bottom: 5px;">
+                Your name:
+                <input type="text" name="name">
+            </div>
+            
+            <div style="font-family: 'Times New Roman', Times, serif; padding-bottom: 5px;">
+                Your phone number:
+                <input type="text" number="number">
+            </div>
+            
+            <div style="position: relative; left: 9px; font-family: 'Times New Roman', Times, serif; padding-bottom: 20px;">
+                Shipping address:
+                <input type="text" address="address">
+            </div>
+
+            <div style="font-family: 'Times New Roman', Times, serif">
+                Should we put you on our mailing list?
+                <input type="radio" name="yes" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="no" value="no">
+                <label for="no">No</label>
+            </div>
+        </form>
+        </div>
+
+        <!--Message-->
+        <div class="message">
+        <form action="http://ck.csit.selu.edu/~ck/cgi-bin/formhandler.pl">
+            <p style="font-family: 'Times New Roman', Times, serif;">Message or any particular instructions:</p>
+            <textarea name="special-instructions" cols="40" rows="5"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+
+    </body>
+    </div>
+
+</html>
